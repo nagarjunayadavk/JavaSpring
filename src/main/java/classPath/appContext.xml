@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fruit" class="Food.Fruit"></bean>
+    
+     <bean id="fruitName" class="Food.Fruit">
+       <constructor-arg  index="0" value="APPLE"></constructor-arg>
+    </bean>
+    <bean id="multiplefruitName" class="Food.Fruit">
+       <constructor-arg  index="0" value="APPLE"></constructor-arg>
+       <constructor-arg  index="1" value="APPLE1"></constructor-arg>
+    </bean>
+    
+    <bean id="setPropertyName" class="Food.Fruit">
+        <property name="fruitName" value="I Am Fruit Name"></property>
+    </bean>
+    
+    
+    <bean id="rice" class="Food.Rice"></bean>
+     <!-- P:  Property  Set(xmlns:p="http://www.springframework.org/schema/p")-->
+     <bean id="setPropertyRiceName" class="Food.Rice" p:riceName = "Sona Mosuri" > </bean>
+
+</beans>
